@@ -1,4 +1,4 @@
-// index.js
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -7,20 +7,20 @@ const { Pool } = require('pg');
 const app = express();
 const port = 3000;
 
-// Configuração do CORS e body-parser
+
 app.use(cors());
 app.use(bodyParser.json());
 
-// Configuração da conexão com o banco de dados PostgreSQL
+
 const pool = new Pool({
-  user: 'postgres',             // Usuário do PostgreSQL
-  host: 'localhost',            // Host do PostgreSQL
-  database: 'postgres',         // Nome do banco de dados
-  password: '123456',           // Senha do PostgreSQL
-  port: 5432,                   // Porta padrão do PostgreSQL
+  user: 'grace_db_hugj_user',             
+  host: 'dpg-cshr1c68ii6s73bkd95g-a',           
+  database: 'grace_db_hugj',         
+  password: 'zWsrF2I7xuydH6fCrxgfTjfOHTButzfv',          
+  port: 5432,                   
 });
 
-// Teste de conexão ao banco de dados
+
 pool.connect((err) => {
   if (err) {
     console.error('Erro de conexão ao banco de dados', err);
@@ -29,7 +29,7 @@ pool.connect((err) => {
   }
 });
 
-// Rota para listar todas as tarefas
+
 app.get('/tarefas', async (req, res) => {
   try {
     const tarefas = await pool.query('SELECT * FROM Tarefas');
