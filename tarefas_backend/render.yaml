@@ -1,0 +1,9 @@
+version: "1"
+services:
+  - type: web
+    name: list-system
+    runtime: static
+    plan: free
+    buildCommand: flutter build web
+    publish: . 
+    autoDeploy: true
