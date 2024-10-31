@@ -1,9 +1,8 @@
 version: "1"
 services:
   - type: web
-    name: list-system
-    runtime: node 
-    plan: free
-    buildCommand: npm install
-    startCommand: npm start 
-    autoDeploy: true
+    name: list-system  
+    runtime: node     
+    buildCommand: npm install 
+    startCommand: npm start     
+    autoDeploy: true  
