@@ -2,8 +2,8 @@ version: "1"
 services:
   - type: web
     name: list-system
-    runtime: static
+    runtime: node 
     plan: free
-    buildCommand: flutter build web
-    publish: . 
+    buildCommand: npm install
+    startCommand: npm start 
     autoDeploy: true
