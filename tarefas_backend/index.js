@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 const pool = new Pool({
   user: 'grace_db_hugj_user',             
-  host: 'dpg-cshr1c68ii6s73bkd95g-a',           
+  host: 'dpg-cshr1c68ii6s73bkd95g-a.oregon-postgres.render.com',           
   database: 'grace_db_hugj',         
   password: 'zWsrF2I7xuydH6fCrxgfTjfOHTButzfv',          
   port: 5432,                   
