@@ -17,7 +17,10 @@ const pool = new Pool({
   host: 'dpg-cshr1c68ii6s73bkd95g-a.oregon-postgres.render.com',           
   database: 'grace_db_hugj',         
   password: 'zWsrF2I7xuydH6fCrxgfTjfOHTButzfv',          
-  port: 5432,                   
+  port: 5432,   
+  ssl: {
+    rejectUnauthorized: false 
+}                
 });
 
 
